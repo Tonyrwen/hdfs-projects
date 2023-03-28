@@ -76,7 +76,9 @@ echo "******************** Final clusters ********************"
 -file player_reducer.py -reducer player_reducer.py \
 -input /part2/matrix/output/* -output /part2/players/output/
 
+echo "********** Player Name    Comfort Zone  Zone Centroid Stats: [Shot Distance, Closest Defender Distance, Shot Clock] - Hit Rate **********"
 /usr/local/hadoop/bin/hdfs dfs -cat /part2/players/output/*
+echo "****************************************"
 
 /usr/local/hadoop/bin/hdfs dfs -rm -r /part2/
 
