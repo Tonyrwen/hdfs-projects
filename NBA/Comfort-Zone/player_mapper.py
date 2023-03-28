@@ -34,4 +34,4 @@ for line in sys.stdin:
         distances.append(dist)
     cluster = distances.index(min(distances))
     new_values = [str(round(el,4)) for el in a]
-    print('{}\t{}-{:.2%}'.format(players.get(int(player)), cluster+1, float(shot_rate)))
+    print('{}\tZone {}:{}-{:.2%}'.format(players.get(int(player)), cluster+1, [int(x) for x in centroids[cluster]], float(shot_rate)))
