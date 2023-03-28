@@ -3,7 +3,7 @@
 /usr/local/hadoop/bin/hdfs dfsadmin -safemode leave
 /usr/local/hadoop/bin/hdfs dfs -rm -r /part2/
 /usr/local/hadoop/bin/hdfs dfs -mkdir -p /part2/matrix/input/
-/usr/local/hadoop/bin/hdfs dfs -copyFromLocal shot_logs.csv /part2/matrix/input/
+/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../shot_logs.csv /part2/matrix/input/
 
 # Compute the averages per player for {SHOT DIST, CLOSE DEF DIST, SHOT CLOCK}
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar \
