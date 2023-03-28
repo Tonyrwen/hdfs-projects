@@ -47,7 +47,7 @@ do
         read -a old_line <<< "${centroids[$i]}"
         read -a new_line <<< "${new_centroids[$i]}"
         echo "old --> ${old_line[1]}"
-        echo "nwe --> ${new_line[1]}"
+        echo "new --> ${new_line[1]}"
         EQUAL=$(python3 check_centroids.py ${old_line[1]} ${new_line[1]})
         COUNT=$(($COUNT+$EQUAL ))
     done
