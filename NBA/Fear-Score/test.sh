@@ -1,5 +1,6 @@
 #!/bin/sh
 /usr/local/hadoop/sbin/start-all.sh
+/usr/local/hadoop/bin/hdfs dfsadmin -safemode leave
 /usr/local/hadoop/bin/hdfs dfs -rm -r /Fear-Score/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /Fear-Score/output/
 /usr/local/hadoop/bin/hdfs dfs -mkdir -p /Fear-Score/input/
