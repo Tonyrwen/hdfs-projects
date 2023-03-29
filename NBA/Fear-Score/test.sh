@@ -3,7 +3,7 @@
 /usr/local/hadoop/bin/hdfs dfs -rm -r /Fear-Score/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /Fear-Score/output/
 /usr/local/hadoop/bin/hdfs dfs -mkdir -p /Fear-Score/input/
-/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../shot_logs.csv /fs/input/
+/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../shot_logs.csv /Fear-Score/input/
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar \
 -file ../Fear-Score/mapper1.py -mapper ../Fear-Score/mapper1.py \
 -file ../Fear-Score/reducer1.py -reducer ../Fear-Score/reducer1.py \
