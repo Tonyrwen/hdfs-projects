@@ -19,4 +19,4 @@ for line in sys.stdin:
 
 for key, value in dct.items():
     worst_stat = list(value.items())[1]
-    print("PLAYER: %s, DEFENDERS: %s\t\tATTEMPTS: %s\tACCURACY: %s"%(key, worst_stat[1][1], worst_stat[1][0], worst_stat[0]))
+    print("PLAYER: %s, DEFENDERS: %s\nATTEMPTS: %s\tACCURACY: %s\n"%(key, worst_stat[1][1], worst_stat[1][0], worst_stat[0]))
