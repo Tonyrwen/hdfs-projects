@@ -12,13 +12,11 @@
 
 
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar \
-# set key to be till the 3 comma
--D mapred.output.textoutputformat.separator="," \
+-D stream.map.output.field.separator=, \
 -D stream.num.map.output.key.fields=3 \
-# arrange by player name first, then hit rate ascending, then attempts decending
+-D map.output.key.field.separator=, \
 -D mapred.output.key.comparator.class=org.apache.hadoop.mapred.lib.KeyFieldBasedComparator \
--D mapred.text.key.comparator.options="-k1,1 -k2,2n -k3,3nr"\
-# partition by player name only
+-D mapred.text.key.comparator.options="-k1,1 -k2,2n -k3,3nr" \
 -D mapred.text.key.partitioner.options=-k1,1 \
 -file ../Fear-Score/mapper2.py -mapper ../Fear-Score/mapper2.py \
 -file ../Fear-Score/reducer2.py -reducer ../Fear-Score/reducer2.py \

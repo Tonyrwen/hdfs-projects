@@ -5,7 +5,8 @@ dct = {}
 
 for line in sys.stdin:
 
-    player, hit_rate, attempt, defender = line.strip().split(",")
+    player, hit_rate, attempt_defender = line.strip().split(",")
+    attempt, defender = attempt_defender.split("\t")
 
     current_player = dct.get(player, {0:[0,[]]})
     current_stat = current_player.get(hit_rate, [[],[]])
